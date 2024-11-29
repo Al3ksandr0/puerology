@@ -1,0 +1,181 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+    box-sizing: border-box;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            font-size: $font-size-h3;
+            font-weight: $font-weight-medium;
+            color: $color-black;
+        }
+    }
+
+    .header-navigation {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        font-size: $font-size-p1;
+
+        @include respond-to("desktop-large") {
+            gap: clamp(1rem, -2.6923rem + 5.7692vw, 2.5rem);
+        }
+
+        @include respond-to("desktop-medium") {
+            display: none;
+        }
+
+        button {
+            font-size: $font-size-p1;
+            font-family: $font-family-base;
+            line-height: 140%;
+        }
+    }
+
+    .header-navigation-menu {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li a {
+            color: $color-black;
+            font-size: $font-size-p1;
+            line-height: 140%;
+            @include text-hover($color-black);
+        }
+    }
+
+    .request-quote {
+        border: 1px solid black;
+        padding: 20px 35px;
+        border-radius: 14px;
+        background: none;
+        cursor: pointer;
+    }
+
+    .burger-header-navigation {
+        display: none;
+        position: absolute;
+        right: 24px;
+
+        @include respond-to("desktop-medium") {
+            display: inline-flex;
+        }
+
+        .hamburger {
+            position: relative;
+            z-index: 1;
+
+            input {
+                display: block;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                opacity: 0;
+                z-index: 2;
+            }
+
+            input:checked~.burger-menu-icons span:nth-child(1) {
+                top: 50%;
+                transform: rotate(45deg);
+            }
+
+            input:checked~.burger-menu-icons span:nth-child(2) {
+                opacity: 0;
+            }
+
+            input:checked~.burger-menu-icons span:nth-child(3) {
+                top: 50%;
+                transform: rotate(-45deg);
+            }
+
+            input:checked~.header-navigation-menu {
+                transform: translateX(0);
+            }
+
+            .burger-menu-icons {
+                width: 40px;
+                height: 40px;
+                position: relative;
+                z-index: 1;
+
+                span {
+                    height: 5px;
+                    background: $color-black;
+                    width: 100%;
+                    border-radius: 25px;
+                    position: absolute;
+                    top: 50%;
+                    display: block;
+                    transition: 0.3s ease;
+                }
+
+                span:nth-child(1) {
+                    top: 25%;
+                }
+
+                span:nth-child(3) {
+                    top: 75%;
+                }
+            }
+
+            .header-navigation-menu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: fixed;
+                text-align: center;
+                width: 100vw;
+                height: 100vh;
+                box-sizing: border-box;
+                top: 0;
+                right: 0;
+
+                background: $color-background-lime;
+                transform-origin: 100% 0%;
+                transform: translateX(100%);
+                transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+                li {
+                    padding: 20px 0;
+                    font-size: $font-size-p1;
+
+                    a {
+                        font-weight: $font-weight-semibold;
+                    }
+                }
+
+                .request-quote {
+                    font-size: $font-size-p1;
+                    background-color: #191A23;
+                    color: #fff;
+                }
+            }
+        }
+
+        .header-navigation-menu {
+            display: none;
+        }
+    }
+
+    .header-navigation-menu {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+        white-space: nowrap;
+        margin: 0;
+        padding: 0;
+
+        @include respond-to("desktop-large") {
+            gap: clamp(1rem, -2.6923rem + 5.7692vw, 2.5rem);
+        }
+    }
+}

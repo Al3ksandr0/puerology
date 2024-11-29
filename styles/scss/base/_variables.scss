@@ -1,0 +1,59 @@
+$color-white: white;
+$color-white-hover: #ffffffce;
+$color-white-active: #ffffff;
+
+$color-black: black;
+$color-black-hover: #000000ce;
+$color-black-active: #000000;
+
+$color-lime: #B9FF66;
+$color-lime-hover: #B9FF66ce;
+$color-lime-active: #B9FF66;
+
+$color-background-lime: #B9FF66;
+$color-background-lime-hover: #B9FF66ce;
+$color-background-lime-active: #B9FF66;
+
+$color-background-white: #ffffff;
+$color-background-grey: #F3F3F3;
+$color-background-dark: #191A23;
+
+$color-btn-dark: #191A23;
+$color-btn-dark-hover: #191a23ce;
+$color-btn-dark-active: #000000;
+
+$color-btn-lime: #B9FF66; 
+$color-btn-lime-hover: #B9FF66ce;
+$color-btn-lime-active: #B9FF66; 
+
+$font-family-base: "Space Grotesk", sans-serif;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+$breakpoints: (
+    "mobile-small": 320px,
+    "mobile-medium": 480px,
+    "mobile-large": 624px,
+
+    "tablet-small": 768px,
+    "tablet-medium": 846px,
+    "tablet-large": 935px,
+
+    "desktop-small": 1024px,
+    "desktop-medium": 1232px,
+    "desktop-large": 1440px
+);
+
+$font-size-h1: clamp(2.6875rem, 1.5179vw + 2.3839rem, 3.75rem); //  43px to 60px
+$font-size-h2: clamp(1.875rem, 2.6786vw + 1.3393rem, 3.75rem); //  30px to 60px
+$font-size-h3: clamp(2.25rem, .3571vw + 2.1786rem, 2.5rem); //  36px to 40px
+$font-size-h4: clamp(1.625rem, .3571vw + 1.5536rem, 1.875rem); //  26px to 30px
+$font-size-h5: clamp(1.125rem, 1.0714vw + .9107rem, 1.875rem); //  18px to 30px
+
+$font-size-p1: clamp(1.125rem, .1786vw + 1.0893rem, 1.25rem); //  18px to 20px
+$font-size-p2: clamp(1rem, .1786vw + .9643rem, 1.125rem); //  16px to 18px
+$font-size-p3: clamp(1rem, .3571vw + .9286rem, 1.25rem); // 16px to 20px
+
+$height-company-logo: clamp(2.5rem, 1.4286vw + 2.2143rem, 3.5rem);
+$gap-company-logo: clamp(2.5rem, 7.8571vw + .9286rem, 8rem);

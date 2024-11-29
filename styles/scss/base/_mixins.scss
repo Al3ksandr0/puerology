@@ -1,0 +1,142 @@
+@import "variables";
+
+@mixin respond-to($breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+@mixin respond-above($breakpoint-above) {
+    $breakpoint: map-get($breakpoints, $breakpoint-above);
+
+    @if $breakpoint {
+        @media (min-width: $breakpoint) {
+            @content;
+        }
+    }
+}
+
+@mixin button-style($back-color) {
+    display: inline-block;
+    border-radius: 14px;
+    padding: 1.25rem 2.1875rem;
+
+    font-size: $font-size-p1;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    background-color: $back-color;
+
+
+    @if $back-color ==$color-btn-dark {
+
+        color: $color-white;
+
+        &:hover {
+            background-color: darken($color-btn-dark-hover, 10%);
+        }
+
+        &:active {
+            background-color: darken($color-btn-dark-active, 20%);
+            transition: 0.3s ease;
+        }
+    }
+
+    @else if $back-color ==$color-btn-lime {
+
+        color: $color-black;
+
+        &:hover {
+            background-color: darken($color-btn-lime-hover, 10%);
+        }
+
+        &:active {
+            background-color: darken($color-btn-lime-active, 20%);
+            transition: 0.3s ease;
+        }
+    }
+}
+
+@mixin text-hover($base-color) {
+    font-size: $font-size-p1;
+    color: $base-color;
+    transition: background-color 0.4s ease;
+    text-decoration: none;
+
+    @if $base-color ==$color-black {
+        &:hover {
+            color: $color-black-hover;
+            text-decoration: underline;
+        }
+
+        &:active {
+            color: $color-black-active;
+            transition: 0.3s ease;
+        }
+    }
+
+    @else if $base-color ==$color-white {
+        &:hover {
+            color: $color-white-hover;
+            text-decoration: underline;
+        }
+
+        &:active {
+            color: $color-white-active;
+            transition: 0.3s ease;
+        }
+    }
+
+    @else if $base-color ==$color-lime {
+        &:hover {
+            color: $color-lime-hover;
+            text-decoration: underline;
+        }
+
+        &:active {
+            color: $color-lime-active;
+            transition: 0.3s ease;
+        }
+    }
+}
+
+@mixin title-section() {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+
+    @include respond-to("tablet-small") {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        border-radius: 7px;
+        padding: 0.5rem;
+        background-color: $color-background-lime;
+        font-size: $font-size-h3;
+        font-weight: $font-weight-semibold;
+        text-align: center;
+        white-space: nowrap;
+
+        @include respond-to("mobile-medium") {
+            white-space: normal;
+        }
+    }
+
+    p {
+        margin-left: 2.5rem;
+        max-width: 36.25rem;
+        font-size: $font-size-p2;
+
+        @include respond-to("tablet-small") {
+            margin-left: 0;
+            max-width: 26.25rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+    }
+}

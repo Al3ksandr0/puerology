@@ -1,0 +1,120 @@
+.contact {
+    &-title {
+        @include title-section;
+    }
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 0 80px 100px;
+        background-color: $color-background-grey;
+        border-radius: 45px;
+
+        @include respond-to("desktop-small") {
+            padding: clamp(1.5rem, 3.2143vw + .8571rem, 3.75rem);
+            justify-content: center;
+        }
+
+        &__form {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            font-size: $font-size-p2;
+            max-width: 34.75rem;
+            justify-content: space-between;
+
+            button {
+                @include button-style($color-btn-dark);
+            }
+
+            &-input {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 2.5rem;
+
+                &:nth-child(4) {
+                    height: 100%;
+                }
+
+                p {
+                    margin-bottom: 1rem;
+                }
+
+                textarea {
+                    resize: none;
+                    height: 100%;
+                    font-size: $font-size-p2;
+                    min-height: 8rem;
+                }
+
+                input,
+                textarea {
+                    border-radius: 14px;
+                    padding: 18px 30px;
+                    border: 1px solid #000000;
+                }
+            }
+
+            &-radio {
+                display: flex;
+                gap: 2.185rem;
+                margin-bottom: 2.5rem;
+
+
+
+                label {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    input[type="radio"] {
+                        appearance: none;
+                        width: 28px;
+                        height: 28px;
+                        border: 1px solid #ccc;
+                        border-radius: 50%;
+                        outline: none;
+                        margin-right: 0.875rem;
+                        display: inline-block;
+                        position: relative;
+                        background-color: #ffffff;
+                        border-color: $color-background-dark;
+
+                        &:checked {
+                            background-color: #ffffff;
+                            border-color: $color-background-dark;
+                        }
+
+                        &:checked::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 16px;
+                            height: 16px;
+                            background-color: $color-background-lime;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__img {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            img {
+                max-width: clamp(70%, 5vw, 100%);
+            }
+
+
+            @include respond-to("desktop-small") {
+                display: none;
+            }
+        }
+    }
+}

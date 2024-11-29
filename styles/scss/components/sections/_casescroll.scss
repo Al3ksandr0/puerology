@@ -1,0 +1,105 @@
+.casescroll {
+    &-title {
+        @include title-section();
+    }
+
+    &-container {
+        display: flex;
+        align-items: flex-start;
+        background-color: $color-background-dark;
+        color: $color-white;
+        padding: 5rem 3.75rem;
+        position: relative;
+        gap: 5rem;
+        border-radius: 2.8125rem;
+
+        @include respond-to("desktop-small") {
+            flex-direction: column;
+        }
+
+        overflow: hidden;
+
+        @include respond-to("mobile-large") {
+            padding: 0;
+            border-radius: 0;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            background-color: transparent;
+            gap: 1.5rem;
+            align-items: stretch;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &__item {
+            position: relative;
+            border-radius: 2.8125rem;
+            flex: 1;
+            background-color: transparent;
+
+            @include respond-to("mobile-large") {
+                flex: 0 0 55%;
+                padding: 2.625rem 3.125rem;
+                background-color: $color-background-dark;
+                // align-items: stretch;
+            }
+
+            &:first-child {
+                @include respond-to("mobile-large") {
+                    margin-left: clamp(1.25rem, 7.1429vw + -.1786rem, 6.25rem);
+                }
+            }
+
+            &:last-child {
+                @include respond-to("mobile-large") {
+                    margin-right: clamp(1.25rem, 7.1429vw + -.1786rem, 6.25rem);
+                }
+            }
+
+            &:not(:last-child)::after {
+                content: '';
+                position: absolute;
+
+                top: 0;
+                right: -33px;
+                width: 1px;
+                height: 100%;
+                background-color: #c6c6c6;
+                gap: 5rem;
+
+                @include respond-to("desktop-small") {
+                    top: auto;
+                    right: auto;
+                    bottom: -33px;
+                    height: 1px;
+                    width: 100%;
+                }
+
+                @include respond-to("mobile-large") {
+                    display: none;
+                }
+            }
+
+            p {
+                font-size: $font-size-p2;
+            }
+
+            &-link {
+                margin-top: 2rem;
+
+                a {
+                    display: flex;
+                    font-size: $font-size-p1;
+                    @include text-hover($color-lime);
+                }
+
+                img {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
