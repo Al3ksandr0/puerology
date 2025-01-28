@@ -482,7 +482,7 @@ welcome-block,
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image: url("/images/background/background.jpg");
+  background-image: url("/puerology/images/background/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -542,16 +542,16 @@ welcome-block,
   z-index: 1;
 }
 .section-tea-wrapper .section-tea .tea-categories div:nth-child(1) {
-  background-image: url("/images/tea-categories/puer.jpg");
+  background-image: url("/puerology/images/tea-categories/puer.jpg");
 }
 .section-tea-wrapper .section-tea .tea-categories div:nth-child(2) {
-  background-image: url("/images/tea-categories/oolong.jpg");
+  background-image: url("/puerology/images/tea-categories/oolong.jpg");
 }
 .section-tea-wrapper .section-tea .tea-categories div:nth-child(3) {
-  background-image: url("/images/tea-categories/white.jpg");
+  background-image: url("/puerology/images/tea-categories/white.jpg");
 }
 .section-tea-wrapper .section-tea .tea-categories div:nth-child(4) {
-  background-image: url("/images/tea-categories/boundtea.jpg");
+  background-image: url("/puerology/images/tea-categories/boundtea.jpg");
 }
 .section-tea-wrapper .section-tea .tea-categories div:hover {
   background-color: #e0e0e0;
@@ -669,7 +669,7 @@ welcome-block,
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-image: url("/images/background/background.jpg");
+  background-image: url("/puerology/images/background/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -729,16 +729,16 @@ welcome-block,
   z-index: 1;
 }
 .section-tea-wrapper .section-tea .tea-categories div:nth-child(1) {
-  background-image: url("/images/tea-categories/puer.jpg");
+  background-image: url("/puerology/images/tea-categories/puer.jpg");
 }
 .section-tea-wrapper .section-tea .tea-categories div:nth-child(2) {
-  background-image: url("/images/tea-categories/oolong.jpg");
+  background-image: url("/puerology/images/tea-categories/oolong.jpg");
 }
 .section-tea-wrapper .section-tea .tea-categories div:nth-child(3) {
-  background-image: url("/images/tea-categories/white.jpg");
+  background-image: url("/puerology/images/tea-categories/white.jpg");
 }
 .section-tea-wrapper .section-tea .tea-categories div:nth-child(4) {
-  background-image: url("/images/tea-categories/boundtea.jpg");
+  background-image: url("/puerology/images/tea-categories/boundtea.jpg");
 }
 .section-tea-wrapper .section-tea .tea-categories div:hover {
   background-color: #e0e0e0;

@@ -17,7 +17,7 @@ const catalog = [
         name: "Улун «Железная Богиня Милосердия»"
     },
     {
-        link: "teas/tea2/index.html",
+        link: "products/puer-2011/puer-2011.html",
         img: "images/welcome/4.jpg",
         name: "Шу Пуэр «Мэнхай»"
     }, {
@@ -26,17 +26,17 @@ const catalog = [
         name: "Улун «Железная Богиня Милосердия»"
     },
     {
-        link: "teas/tea2/index.html",
+        link: "products/puer-2011/puer-2011.html",
         img: "images/welcome/4.jpg",
         name: "Шу Пуэр «Мэнхай»"
     },
     {
-        link: "teas/tea1/index.html",
+        link: "products/puer-2011/puer-2011.html",
         img: "images/welcome/4.jpg",
         name: "Улун «Железная Богиня Милосердия»"
     },
     {
-        link: "teas/tea2/index.html",
+        link: "products/puer-2011/puer-2011.html",
         img: "images/welcome/4.jpg",
         name: "Шу Пуэр «Мэнхай»"
     },
