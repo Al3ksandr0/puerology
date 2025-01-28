@@ -1,12 +1,24 @@
+
 // * {
-//     font-family: $font-family-base;
-// } 
+//     outline: 1px solid red;
+// }  
+
+html {
+    scroll-behavior: smooth;
+}
+
+#section-tea {
+    scroll-margin-top: 7.3rem;
+
+    @include respond-to("desktop-small") {
+        scroll-margin-top: 5.3rem;
+    }
+}
 
 body {
     font-family: $font-family-base;
     font-weight: $font-weight-regular;
-    max-width: 90rem;
-    margin: 0 auto;
+    height: 100%;
 }
 
 .container-maxw,
@@ -35,6 +47,12 @@ body {
 
 .header,
 .welcome-block,
+.grid-container,
+.section-tea {
+    margin-top: 0;
+}
+
+welcome-block,
 .grid-container {
     margin-top: 0;
 }

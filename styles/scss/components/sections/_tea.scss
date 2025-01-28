@@ -1,0 +1,180 @@
+.section-tea-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/images/background/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.625);
+        z-index: 1;
+    }
+
+    & .section-tea {
+        position: relative;
+        z-index: 2;
+        color: white;
+    }
+
+    .section-tea {
+        h1 {
+            display: flex;
+            justify-content: center;
+            font-size: 3rem;
+            color: $color-white;
+            padding: 4rem;
+        }
+
+        .tea-categories {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: space-evenly;
+        }
+
+        .tea-categories div {
+            position: relative;
+            width: 300px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.3s, width 0.3s, height 0.3s;
+            overflow: hidden;
+            z-index: 0;
+            font-size: 2rem;
+        }
+
+
+        .tea-categories div::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: -1;
+        }
+
+        .tea-categories div {
+            position: relative;
+            z-index: 1;
+        }
+
+        .tea-categories div:nth-child(1) {
+            background-image: url('/images/tea-categories/puer.jpg');
+        }
+
+        .tea-categories div:nth-child(2) {
+            background-image: url('/images/tea-categories/oolong.jpg');
+        }
+
+        .tea-categories div:nth-child(3) {
+            background-image: url('/images/tea-categories/white.jpg');
+        }
+
+        .tea-categories div:nth-child(4) {
+            background-image: url('/images/tea-categories/boundtea.jpg');
+        }
+
+
+        .tea-categories div:hover {
+            background-color: #e0e0e0;
+        }
+
+        .tea-categories div.active {
+            width: 500px;
+            height: 150px;
+        }
+
+        .subcategories a {
+            display: block;
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .slider-container {
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+
+
+            .slider-track {
+                position: relative;
+                z-index: 0;
+                display: flex;
+                transition: transform 0.5s ease;
+
+                .slide-item {
+                    flex-shrink: 0;
+                    width: 100%;
+                    height: auto;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                    }
+                }
+            }
+
+            .slider-controls {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 2;
+            }
+
+            .slider-controls button {
+                background: rgba(0, 0, 0, 0.3);
+                color: #fff;
+                border: none;
+                padding: 10px 15px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background 0.2s;
+            }
+
+            .slider-controls button:hover {
+                background: rgba(0, 0, 0, 0.5);
+            }
+
+            .slider-indicators {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 8px;
+                z-index: 3;
+
+                .dot {
+                    width: 12px;
+                    height: 12px;
+                    background-color: rgb(255, 199, 150);
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease-in-out;
+                }
+
+                .dot.active {
+                    background-color: rgba(255, 130, 28, 0.663);
+                }
+            }
+        }
+    }
+}

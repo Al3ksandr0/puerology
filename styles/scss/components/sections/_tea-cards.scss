@@ -1,0 +1,36 @@
+.tea-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.tea-card {
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+
+.tea-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tea-card h3 {
+    margin: 10px 0;
+
+}
+
+.tea-card a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.4rem; 
+} 
+
+.tea-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+}

@@ -1,0 +1,137 @@
+@import "../../../styles/scss/base/reset";
+@import "../../../styles/scss/base/fonts";
+@import "../../../styles/scss/base/variables";
+@import "../../../styles/scss/base/mixins";
+@import "../../../styles/scss/base/global";
+
+@import "../../../styles/scss/components/header";
+@import "../../../styles/scss/components/sections";
+
+@import "../../../styles/scss/components/sections/tea";
+
+
+
+.product-container {
+    max-width: 800px;
+    padding: 200px 0;
+}
+
+.productName {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#productDescription {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.availability {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.availability.in-stock {
+    color: green;
+}
+
+.availability.awaiting {
+    color: orange;
+}
+
+.availability.out-of-stock {
+    color: red;
+}
+
+.radio-options label {
+    margin-right: 20px;
+}
+
+.price-display {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+
+
+.slider-container {
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+
+    .slider-track {
+        position: relative;
+        z-index: 0;
+        display: flex;
+        transition: transform 0.5s ease;
+
+        .slide-item {
+            flex-shrink: 0;
+            width: 100%;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+    }
+
+    .slider-controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+    }
+
+    .slider-controls button {
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.2s;
+    }
+
+    .slider-controls button:hover {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .slider-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 3;
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgb(255, 199, 150);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .dot.active {
+            background-color: rgba(255, 130, 28, 0.663);
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}

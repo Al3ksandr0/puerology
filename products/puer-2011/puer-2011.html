@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пуэр 2011</title>
+    <link rel="stylesheet" href="products/styles/css/style.css">
+
+</head>
+
+<body>
+    <div id="headerContainer"></div>
+
+    <div class="product-container">
+
+        <h1 id="productName"></h1>
+
+        <div id="sliderContainer"></div>
+
+        <p id="productDescription"></p>
+
+        <div class="availability" id="availability"></div>
+
+        <div class="radio-options"></div>
+
+        <div class="price-display">
+            Цена: <span id="priceValue">—</span> грн
+        </div>
+
+        <div class="buy-section">
+            <button id="buyBtn" disabled>Купить</button>
+        </div>
+
+        <div class="order-form hidden">
+            <h2>оформление заказа</h2>
+            <form name="order" id="orderForm">
+                <label for="nameField">имя: </label>
+                <input type="text" id="nameField" name="name" required>
+
+                <label for="cityField">город: </label>
+                <input type="text" id="cityField" name="city" required>
+
+                <button type="button" id="finishOrder">сделать заказ</button>
+            </form>
+        </div>
+
+        <div class="notification hidden"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="js/conect.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="app.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

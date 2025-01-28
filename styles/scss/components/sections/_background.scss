@@ -1,0 +1,26 @@
+main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/images/background/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+main .section-welcome,
+main .section-tea {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
