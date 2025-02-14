@@ -79,6 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
         orderFormElement.classList.remove('hidden');
     });
 
+    function isValidName(name) {
+        return /^[a-zA-Zа-яА-ЯіІєЄїЇ]+$/.test(name);
+    }
+
+    function isValidCity(city) {
+        return /^[a-zA-Zа-яА-ЯіІєЄїЇ]+(?:[-\s][a-zA-Zа-яА-ЯіІєЄїЇ]+)*$/.test(city); //тут пройдут все города через " " и "-" 
+    }
 
     finishOrderBtn.addEventListener('click', () => {
         const clientName = document.forms.order.name.value.trim();
@@ -86,6 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!clientName || !clientCity) {
             alert('заполните все поля');
+            return;
+        }
+
+        if (!isValidName(clientName)) {
+            alert('имя должно содержать только буквы');
+            return;
+        }
+
+        if (!isValidCity(clientCity)) {
+            alert('город должен содержать только буквы');
             return;
         }
 
